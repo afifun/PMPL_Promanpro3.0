@@ -32,7 +32,7 @@ class User extends CActiveRecord
                     array('Username','match','not'=>true,'pattern'=>'/[^a-z0-9A-Z]/'),
                     array('Email','email'),
                     //array('Username,Password','min'=>8),
-			array('Username, Password, Name, Email', 'required'),
+			array('Username, Password, Repassword, Name, Email', 'required'),
 			array('Username, Password, Name', 'length', 'max'=>20),
                     array('Password', 'length', 'min'=>6),
 			array('Email', 'length', 'max'=>30),
@@ -62,6 +62,7 @@ class User extends CActiveRecord
 			'ID' => 'ID',
 			'Username' => 'Username',
 			'Password' => 'Password',
+			'Repassword' => 'Retype Password',
 			'Name' => 'Name',
 			'Email' => 'Email',
                         'isActive' => 'isActive'

@@ -19,6 +19,12 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
+	<div class="row">
+		<?php echo $form->labelEx($model,'Name'); ?>
+		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20)); ?>
+		<!--<?php echo $form->error($model,'Name'); ?>-->
+	</div>
+
         <div class="row">
             <?php echo $form->labelEx($model,'Username'); ?>
 		<?php echo $form->textField($model,'Username',array('size'=>20,'maxlength'=>20,'placeholder'=>'alphanumerics with no space')); ?>
@@ -32,16 +38,18 @@
 	</div>
 
 	<div class="row">
+		<?php echo $form->labelEx($model,'Repassword'); ?>
+		<?php echo $form->passwordField($model,'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'6-20 characters')); ?>
+		<!--<?php echo $form->error($model,'Password'); ?>-->
+	</div>
+
+	<div class="row">
 		<?php echo $form->labelEx($model,'Email'); ?>
 		<?php echo $form->textField($model,'Email',array('size'=>40,'maxlength'=>40)); ?>
 		<!--<?php echo $form->error($model,'Email'); ?>-->
 	</div>
 
-	<div class="row">
-		<?php echo $form->labelEx($model,'Name'); ?>
-		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20)); ?>
-		<!--<?php echo $form->error($model,'Name'); ?>-->
-	</div>
+	
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton('create'); ?>

@@ -49,8 +49,11 @@ for ($i = 0; $i < $jumlahJam; $i++) {
     echo '</tr>';
 }
 echo '</table>';
-echo '</form>';
-echo '<div class="row button">';
+//echo '<div class="row">';
+echo '<div class="button">';
 echo CHtml::Button('Cancel', array('submit' => array('project/'.$id)));
 echo '</div>';
+//echo '</div>';
+echo '</form>';
+
 ?>
