@@ -16862,3 +16862,23 @@ REQUEST_URI=/promanpro/index.php/site/register
 in C:\xampp-portable\htdocs\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\StreamBuffer.php (234)
 in C:\xampp-portable\htdocs\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\StreamBuffer.php (71)
 in C:\xampp-portable\htdocs\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\AbstractSmtpTransport.php (101)
+2014/11/25 08:10:49 [error] [exception.Swift_TransportException] exception 'Swift_TransportException' with message 'Failed to authenticate on SMTP server with username "promanpro2014@gmail.com" using 2 possible authenticators' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\Esmtp\AuthHandler.php:179
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\EsmtpTransport.php(252): Swift_Transport_Esmtp_AuthHandler->afterEhlo(Object(Swift_SmtpTransport))
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Transport\AbstractSmtpTransport.php(108): Swift_Transport_EsmtpTransport->_doHeloCommand()
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\extensions\yii-mail\vendors\swiftMailer\classes\Swift\Mailer.php(74): Swift_Transport_AbstractSmtpTransport->start()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\extensions\yii-mail\YiiMail.php(133): Swift_Mailer->send(Object(Swift_Message), Array)
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(196): YiiMail->send(Object(YiiMailMessage))
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(71): SiteController->SendMail(Object(User))
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/site/register
+---

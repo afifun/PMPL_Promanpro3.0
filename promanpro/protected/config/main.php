@@ -57,9 +57,9 @@ return array(
                             'transportType'=>'smtp', /// case sensitive!
                             'transportOptions'=>array(
                                 'host'=>'smtp.gmail.com',
-                                'username'=>'promanpro2014@gmail.com',
+                                'username'=>'moh.afifun46@gmail.com',
                             // or email@googleappsdomain.com
-                            'password'=>'promanproppl2014',
+                            'password'=>'m.amli1952-2011',
                             'port'=>'465',
                             'encryption'=>'ssl',
                             ),
@@ -127,6 +127,6 @@ return array(
 	'params'=>array(
 		// this is used in contact page
             //edit here
-		'adminEmail'=>'promanpro2014@gmail.com',
+		'adminEmail'=>'moh.afifun46@gmail.com',
 	),
 );
