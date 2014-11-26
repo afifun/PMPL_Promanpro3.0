@@ -22,10 +22,12 @@ class UserIdentity extends CUserIdentity
 //			'demo'=>'demo',
 //			'admin'=>'admin',
 		//);
+
+		$pass = md5($this->password);
                 $users=User::model()->findByAttributes(array('Username'=>  $this->username));
 		if($users==null)
 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-		elseif($users->Password!==$this->password)
+		elseif($users->Password !== $pass)
 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
                 elseif($users->isActive==0)
 			$this->errorCode=self::ERROR_UNKNOWN_IDENTITY;
@@ -34,6 +36,8 @@ class UserIdentity extends CUserIdentity
                         $this->setState('id', $users->ID);
                 $this->errorCode=self::ERROR_NONE;
                 }
+       echo 'users '.$users->Password.'</br>';
+       echo 'this '.$pass.'</br>';
 		return $this->errorCode;
 	}
 }

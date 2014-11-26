@@ -33,14 +33,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Password'); ?>
-		<?php echo $form->passwordField($model,'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'6-20 characters')); ?>
+		<?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'6-20 characters')); ?>
 		<!--<?php echo $form->error($model,'Password'); ?>-->
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Repassword'); ?>
-		<?php echo $form->passwordField($model,'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'6-20 characters')); ?>
-		<!--<?php echo $form->error($model,'Password'); ?>-->
+		<?php echo $form->passwordField($model,'Repassword',array('size'=>20,'maxlength'=>20,'placeholder'=>'6-20 characters')); ?>		<!--<?php echo $form->error($model,'Password'); ?>-->
 	</div>
 
 	<div class="row">

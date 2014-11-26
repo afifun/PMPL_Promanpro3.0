@@ -15,6 +15,14 @@ class User extends CActiveRecord
 	/**
 	 * @return string the associated database table name
 	 */
+
+
+	 // holds the password confirmation word
+    public $Repassword;
+ 
+    //will hold the encrypted password for update actions.
+    public $initialPassword;
+
 	public function tableName()
 	{
 		return 'user';
@@ -32,7 +40,8 @@ class User extends CActiveRecord
                     array('Username','match','not'=>true,'pattern'=>'/[^a-z0-9A-Z]/'),
                     array('Email','email'),
                     //array('Username,Password','min'=>8),
-			array('Username, Password, Repassword, Name, Email', 'required'),
+			array('Username, Repassword, Password, Repassword, Name, Email', 'required'),
+			array('Password', 'compare', 'compareAttribute'=>'Repassword'),
 			array('Username, Password, Name', 'length', 'max'=>20),
                     array('Password', 'length', 'min'=>6),
 			array('Email', 'length', 'max'=>30),
@@ -98,6 +107,14 @@ class User extends CActiveRecord
 			'criteria'=>$criteria,
 		));
 	}
+
+	public function beforeSave() {
+        $pass = md5($this->Password);
+        $this->Password = $pass;
+        return true;
+    }
+
+
 
 	/**
 	 * Returns the static model of the specified AR class.
