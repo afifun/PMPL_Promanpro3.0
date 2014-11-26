@@ -60,7 +60,7 @@ $bm = '';
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>Link ".$i."</a>";
                 $nama = $record[$i]->Name;
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>".($i+1).". ".$nama."</a>";
-                $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>".($i+1).". ".$nama."</a><br>";
+                $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."' style=text-decoration:none;>".($i+1).". ".$nama."</a><br>" ;
                 //echo "<br>";
              }
            
@@ -82,7 +82,7 @@ $bm = '';
                 $nama = $record[$i]->Name;
     //            echo "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."'>".($i+1).". ".$nama."</a>";
     //            echo "<br>";
-                $mu .= "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."'>".($i+1).". ".$nama."</a><br>";
+                $mu .= "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."' style=text-decoration:none;>".($i+1).". ".$nama."</a><br>";
             }
         }
     } else {
@@ -117,7 +117,7 @@ foreach($modtask as $task){
 $html="<html><table style=width:50px>";
 $k=30;
 for($i=0; $i<sizeof($progress); $i++){
-    $html .= '<tr><td><a href=../task/view/'.$idtask[$i].'>'.$namatask[$i].'</href></td><td><progress value='.intval($progress[$i]).' max=100 style=width:500px;height: 30px></progress></td><td><label>'.$progress[$i].'%</label></td></tr>';
+    $html .= '<tr><td><a href=../task/view/'.$idtask[$i].'>'.$namatask[$i].'</href></td><td><progress value='.intval($progress[$i]).' max=100 style=width:500px;height: 30px;></progress></td><td><label>'.$progress[$i].'%</label></td></tr>';
 }
 $html .="</table></html>";
 

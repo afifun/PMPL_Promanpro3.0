@@ -43,22 +43,28 @@ please fill register form below to make a promanpro account
 		<?php echo $form->error($model,'name'); ?>
 	</div>
 
-    <div class="row">
-		<?php echo $form->labelEx($model,'username'); ?>
-		<?php echo $form->textField($model,'username'); ?>
-		<?php echo $form->error($model,'username'); ?>
-	</div>
-    
 	<div class="row">
 		<?php echo $form->labelEx($model,'email'); ?>
 		<?php echo $form->textField($model,'email'); ?>
 		<?php echo $form->error($model,'email'); ?>
 	</div>
-    
+
+    <div class="row">
+		<?php echo $form->labelEx($model,'username'); ?>
+		<?php echo $form->textField($model,'username'); ?>
+		<?php echo $form->error($model,'username'); ?>
+	</div>
+    	  
     <div class="row">
 		<?php echo $form->labelEx($model,'password'); ?>
 		<?php echo $form->textField($model,'password'); ?>
 		<?php echo $form->error($model,'password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'repassword'); ?>
+		<?php echo $form->textField($model,'repassword'); ?>
+		<?php echo $form->error($model,'repassword'); ?>
 	</div>
 
 	<div class="row buttons">

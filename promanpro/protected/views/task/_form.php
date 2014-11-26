@@ -39,22 +39,7 @@
 		<?php //echo $form->error($model,'Description'); ?>
 	</div>
 
-    <div class="row">
-        <?php echo $form->labelEx($model, 'Start_Date'); ?>
-        <?php
-        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
-            'name' => 'Task[Start_Time]',
-            'value' => $model->Start_Time,
-            'htmlOptions' => array(
-                'size' => '10', // textField size
-                'maxlength' => '10', // textField maxlength
-            ),
-            'options' => array(
-                'dateFormat' => 'yy-mm-dd',
-            )
-        ));
-        ?>
-    </div>
+ 
 
   
 
@@ -69,6 +54,23 @@
 <?php echo $form->labelEx($model, 'Progress'); ?>
 <?php echo $form->textField($model, 'Progress'); ?>
         <?php //echo $form->error($model, 'Progress'); ?>
+    </div>
+
+       <div class="row">
+        <?php echo $form->labelEx($model, 'Start_Date'); ?>
+        <?php
+        $this->widget('zii.widgets.jui.CJuiDatePicker', array(
+            'name' => 'Task[Start_Time]',
+            'value' => $model->Start_Time,
+            'htmlOptions' => array(
+                'size' => '10', // textField size
+                'maxlength' => '10', // textField maxlength
+            ),
+            'options' => array(
+                'dateFormat' => 'yy-mm-dd',
+            )
+        ));
+        ?>
     </div>
 
     <div class="row">

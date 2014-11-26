@@ -48,8 +48,8 @@ for($i = 0; $i<$jumlahJam; $i++){
     echo '</tr>';
 }
 echo '</table>';
-echo '<div class="row button">';
-echo '<input type="submit" value="Submit" name="meetingUp">';
+echo '<div class="row button" style="margin-left: 5px; ">';
+echo '<input type="submit" value="Submit" name="meetingUp" style="margin-right: 10px">';
 echo CHtml::Button('Back', array('submit' => array('project/'.$id)));
 echo '</div>';
 echo '</form>';
