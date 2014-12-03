@@ -61,9 +61,10 @@ class SiteController extends Controller
                             }
             
             $model=new User;
-           
+            $model->setScenario('register');
             if(isset($_POST['User']))
             {   
+
                 $model->attributes = $_POST['User'];
 
                 if($model->save())
@@ -76,6 +77,7 @@ class SiteController extends Controller
                 'model'=>$model,
             ));
         }
+
         public function actionViewSuccess(){
             if (!Yii::app()->user->isGuest)
                             {
@@ -222,4 +224,6 @@ class SiteController extends Controller
             //if($a==4) {echo 'b';die();}
             //$this->render('success');
         }
+
+
 }
