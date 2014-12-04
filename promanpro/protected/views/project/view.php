@@ -60,10 +60,9 @@ $bm = '';
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>Link ".$i."</a>";
                 $nama = $record[$i]->Name;
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>".($i+1).". ".$nama."</a>";
-                $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."' style=text-decoration:none;>".($i+1).". ".$nama."</a><br>" ;
+                $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."' style=text-decoration:none;>".($i+1).". ".$nama."</a><button type=Submit; style=float:right;>Edit</button><br>" ;
                 //echo "<br>";
              }
-           
         }
     } else {
         //echo "<p>No BOOK ME Schedule available</p>";
@@ -82,7 +81,7 @@ $bm = '';
                 $nama = $record[$i]->Name;
     //            echo "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."'>".($i+1).". ".$nama."</a>";
     //            echo "<br>";
-                $mu .= "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."' style=text-decoration:none;>".($i+1).". ".$nama."</a><br>";
+                $mu .= "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."' style=text-decoration:none;>".($i+1).". ".$nama."</a><button type=Submit; style=float:right;>Edit</button><br>";
             }
         }
     } else {
