@@ -138,9 +138,10 @@
 
 
     <div class="row buttons">
-<?php echo CHtml::submitButton('Create'); ?>
+
     <?php //echo CHtml::Button('Cancel',array('onClick'=> 'js:history.go(-1);returnFalse;')); ?>
          <?php echo CHtml::Button('Cancel',array('submit'=> array('project/'.$idp.''))); ?>
+         <?php echo CHtml::submitButton('Create'); ?>
     </div>
 
 <?php $this->endWidget(); ?>

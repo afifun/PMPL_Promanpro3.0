@@ -21,13 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Name'); ?>
-		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20, 'placeholder' => 'name' )); ?>
+		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20, 'placeholder' => 'Your name' )); ?>
 		<!--<?php echo $form->error($model,'Name'); ?>-->
 	</div>
 
         <div class="row">
             <?php echo $form->labelEx($model,'Username'); ?>
-		<?php echo $form->textField($model,'Username',array('size'=>20,'maxlength'=>20,'placeholder'=>'alphanumerics with no space')); ?>
+		<?php echo $form->textField($model,'Username',array('size'=>20,'maxlength'=>20,'placeholder'=>'Alphanumerics with no space')); ?>
 		<!--<?php echo $form->error($model,'Username'); ?>-->
 	</div>
 
@@ -44,15 +44,15 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Email'); ?>
-		<?php echo $form->textField($model,'Email',array('size'=>40,'maxlength'=>40)); ?>
+		<?php echo $form->textField($model,'Email',array('size'=>40,'maxlength'=>40,'placeholder'=>'Your email')); ?>
 		<!--<?php echo $form->error($model,'Email'); ?>-->
 	</div>
 
 	
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton('create'); ?>
 		<?php echo CHtml::Button('Cancel',array('submit'=>array('site/index'))); ?>
+		<?php echo CHtml::submitButton('Create'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

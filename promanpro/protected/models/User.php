@@ -40,6 +40,18 @@ class User extends CActiveRecord {
 						'unique' 
 				),
 				array (
+						'Name',
+						'match',
+						'not' => true,
+						'pattern' => '/[^a-zA-Z]/' 
+				),
+				array (
+						'Password',
+						'match',
+						'not' => true,
+						'pattern' => '/[^a-z0-9A-Z]/' 
+				),
+				array (
 						'Username',
 						'match',
 						'not' => true,
@@ -91,8 +103,7 @@ class User extends CActiveRecord {
 				array (
 						'Password',
 						'length',
-						'min' => 8,
-						'pattern' => '/[^a-z0-9A-Z]/'
+						'min' => 8
 				),
 				array (
 						'Email',
@@ -102,8 +113,7 @@ class User extends CActiveRecord {
 				array (
 						'Name',
 						'length',
-						'max' => 50,
-						'pattern' => '/[^a-zA-Z]/'
+						'max' => 50
 				),
 				// The following rule is used by search().
 				// @todo Please remove those attributes that should not be searched.

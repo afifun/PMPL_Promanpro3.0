@@ -21,13 +21,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Name'); ?>
-		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20,'placeholder'=>'Project name')); ?>
 		<!--<?php echo $form->error($model,'Name'); ?>-->
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Description'); ?>
-		<?php echo $form->textArea($model,'Description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'Description',array('rows'=>6, 'cols'=>50, 'placeholder'=>'Project description')); ?>
 		<!--<?php echo $form->error($model,'Description'); ?>-->
 	</div>
 <!--
@@ -85,8 +85,8 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
         -->
 
 	<div class="row buttons">
-		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
-            <?php echo CHtml::Button('Cancel',array('submit'=> array('project/index'))); ?>
+        <?php echo CHtml::Button('Cancel',array('submit'=> array('project/index'))); ?>
+        <?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
 	</div>
 
 <?php $this->endWidget(); ?>

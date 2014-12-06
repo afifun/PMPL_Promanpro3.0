@@ -18481,3 +18481,276 @@ Stack trace:
 REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/user/95
 HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/project/30
 ---
+2014/12/06 11:12:41 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:13:16 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:13:29 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:13:51 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:13:52 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:13:58 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php
+---
+2014/12/06 11:21:03 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^a-z0-9A-Z]/')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+---
+2014/12/06 11:22:56 [error] [exception.CException] exception 'CException' with message 'Property "CStringValidator.0" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('0', 'match')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('length', Object(User), 'Password', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(User), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\_form.php(23): CActiveForm->labelEx(Object(User), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\site\register.php(14): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('register', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(78): CController->render('register', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionRegister()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('register')
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('site/register')
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/site/register
+---
+2014/12/06 11:26:55 [error] [exception.CException] exception 'CException' with message 'Property "CRequiredValidator.pattern" is not defined.' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\validators\CValidator.php(189): CComponent->__set('pattern', '/[^(19|20)\\d\\d[...')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(287): CValidator::createValidator('required', Object(Project), 'Name,Start_Date', Array)
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(260): CModel->createValidators()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CModel.php(304): CModel->getValidators('Name')
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\helpers\CHtml.php(1414): CModel->isAttributeRequired('Name')
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\widgets\CActiveForm.php(597): CHtml::activeLabelEx(Object(Project), 'Name', Array)
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\project\_form.php(23): CActiveForm->labelEx(Object(Project), 'Name')
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\views\project\create.php(18): CController->renderPartial('_form', Array)
+#11 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(126): require('C:\\xampp\\htdocs...')
+#12 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\\xampp\\htdocs...', Array, true)
+#13 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): CBaseController->renderFile('C:\\xampp\\htdocs...', Array, true)
+#14 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#15 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\ProjectController.php(89): CController->render('create', Array)
+#16 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): ProjectController->actionCreate()
+#17 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#20 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#21 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#22 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(291): CFilterChain->run()
+#24 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#25 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#26 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('project/create')
+#27 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#28 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#29 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/project/create
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/project/index
+---

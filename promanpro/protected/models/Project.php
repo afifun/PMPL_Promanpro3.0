@@ -29,10 +29,16 @@ class Project extends CActiveRecord {
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array (
+
+				array (
+						'Start_Date,End_Date',
+						'match',
+						'not' => true,
+						'pattern' => '/[^(19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01])]/' 
+				),
 				array (
 						'Name,Start_Date',
-						'required',
-						'pattern' => '/[^(19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01])]/'
+						'required'
 				),
 				array (
 						'Name',
@@ -59,8 +65,7 @@ class Project extends CActiveRecord {
 				),
 				array (
 						'End_Time',
-						'cekWaktu',
-						'pattern' => '/[^(19|20)\d\d[\-\/.](0[1-9]|1[012])[\-\/.](0[1-9]|[12][0-9]|3[01])]/'
+						'cekWaktu'
 				),
 				// The following rule is used by search().
 				// @todo Please remove those attributes that should not be searched.
