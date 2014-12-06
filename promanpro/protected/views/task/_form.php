@@ -29,13 +29,13 @@
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Name'); ?>
-		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20)); ?>
+		<?php echo $form->textField($model,'Name', array('size'=>20,'maxlength'=>20,'placeholder'=>'name')); ?>
 		<?php //echo $form->error($model,'Name'); ?>
 	</div>
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Description'); ?>
-		<?php echo $form->textArea($model,'Description',array('rows'=>6, 'cols'=>50)); ?>
+		<?php echo $form->textArea($model,'Description', array('rows' => 6, 'cols' => 50, 'placeholder' => 'describe your task')); ?>
 		<?php //echo $form->error($model,'Description'); ?>
 	</div>
 
@@ -45,14 +45,14 @@
 
     <div class="row">
 <?php echo $form->labelEx($model, 'PJ'); ?>
-<?php echo $form->textField($model, 'PJ', array('size' => 20, 'maxlength' => 20)); ?>
+<?php echo $form->textField($model, 'PJ', array('size' => 20, 'maxlength' => 20, 'placeholder' => 'assigned to')); ?>
     <?php //echo $form->error($model, 'PJ'); ?>
     </div>
 
 
     <div class="row">
 <?php echo $form->labelEx($model, 'Progress'); ?>
-<?php echo $form->textField($model, 'Progress'); ?>
+<?php echo $form->textField($model, 'Progress', array('placeholder' => '1 - 100')); ?>
         <?php //echo $form->error($model, 'Progress'); ?>
     </div>
 
@@ -65,6 +65,7 @@
             'htmlOptions' => array(
                 'size' => '10', // textField size
                 'maxlength' => '10', // textField maxlength
+                'placeholder' => 'yyyy-mm-dd' 
             ),
             'options' => array(
                 'dateFormat' => 'yy-mm-dd',
@@ -82,6 +83,7 @@
             'htmlOptions' => array(
                 'size' => '10', // textField size
                 'maxlength' => '10', // textField maxlength
+                'placeholder' => 'yyyy-mm-dd' 
             ),
             'options' => array(
                 'dateFormat' => 'yy-mm-dd',
