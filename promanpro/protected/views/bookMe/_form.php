@@ -29,7 +29,7 @@
 
     <div class="row">
         <?php echo $form->labelEx($model, 'Description'); ?>
-<?php echo $form->textArea($model, 'Description', array('rows' => 6, 'cols' => 100, 'placeholder' => 'description your event')); ?>
+<?php echo $form->textArea($model, 'Description', array('rows' => 6, 'cols' => 100, 'placeholder' => 'describe your event')); ?>
 <?php // echo $form->error($model, 'Description'); ?>
     </div>
 
@@ -140,8 +140,8 @@
     <div class="row buttons">
 
     <?php //echo CHtml::Button('Cancel',array('onClick'=> 'js:history.go(-1);returnFalse;')); ?>
-         <?php echo CHtml::Button('Cancel',array('submit'=> array('project/'.$idp.''))); ?>
          <?php echo CHtml::submitButton('Create'); ?>
+         <?php echo CHtml::Button('Cancel',array('submit'=> array('project/'.$idp.''))); ?>
     </div>
 
 <?php $this->endWidget(); ?>
