@@ -32,7 +32,7 @@ class UserController extends Controller
 //				'users'=>array('*'),
 //			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','delete','index','view'),
+				'actions'=>array('create','update','update_password','delete','index','view'),
 				'users'=>array('@'),
 			),
 			//array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -99,6 +99,37 @@ class UserController extends Controller
 		}
 
 		$this->render('update',array(
+			'model'=>$model,
+		));
+	}
+
+	/**
+	 * Updates a particular model.
+	 * If update is successful, the browser will be redirected to the 'view' page.
+	 * @param integer $id the ID of the model to be updated
+	 */
+	public function actionUpdate_password($id)
+	{
+		//$model=$this->loadModel($id);
+		$model = new User;
+		$model = User::model()->findByAttributes(array('ID'=>$id));
+		$model->setScenario('changePwd');
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+
+		if(isset($_POST['User']))
+		{
+			$model->attributes=$_POST['User'];
+			$valid = $model->validate();
+			if($valid){
+				$model->Password = $model->new_password;
+			}
+			if($model->save())
+				$this->redirect(array('view','id'=>$model->ID));
+		}
+
+		$this->render('update_password',array(
 			'model'=>$model,
 		));
 	}

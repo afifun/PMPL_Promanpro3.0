@@ -21,9 +21,21 @@
 
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'Name'); ?>
-		<?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20)); ?>
-		<?php echo $form->error($model,'Name'); ?>
+		<?php echo $form->labelEx($model,'old_password'); ?>
+		<?php echo $form->passwordField($model,'old_password',array('size'=>20,'maxlength'=>20)); ?>
+		<?php //echo $form->error($model,'Password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'new_password'); ?>
+		<?php echo $form->passwordField($model,'new_password',array('size'=>20,'maxlength'=>20)); ?>
+		<?php //echo $form->error($model,'Password'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'Repassword'); ?>
+		<?php echo $form->passwordField($model,'Repassword',array('size'=>20,'maxlength'=>20)); ?>
+		<?php //echo $form->error($model,'Password'); ?>
 	</div>
 
 	<div class="row buttons">

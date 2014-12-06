@@ -18,4 +18,4 @@ $this->menu=array(
 <br></br>
 <h1>Edit Name</h1>
 
-<?php $this->renderPartial('_form', array('model'=>$model)); ?>
+<?php $this->renderPartial('_form_update_password', array('model'=>$model)); ?>

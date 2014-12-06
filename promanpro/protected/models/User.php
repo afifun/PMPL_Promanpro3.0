@@ -23,6 +23,10 @@ class User extends CActiveRecord
     //will hold the encrypted password for update actions.
     public $initialPassword;
 
+    public $old_password;
+
+    public $new_password;
+
 	public function tableName()
 	{
 		return 'user';
@@ -45,6 +49,9 @@ class User extends CActiveRecord
                     array('Username, Password, Repassword, Name, Email', 'required', 'on' => 'register'),
 			array('Password', 'compare', 'compareAttribute'=>'Repassword', 'on' => 'register' ),
 			array('Username, Password, Name', 'length', 'max'=>20, 'on' => 'register'),
+			array('old_password, new_password, Repassword', 'required', 'on' => 'changePwd'),
+			array('old_password', 'findPasswords', 'on' => 'changePwd'),
+			array('new_password', 'compare', 'compareAttribute'=>'Repassword', 'on' => 'changePwd' ),
                     array('Password', 'length', 'min'=>6),
 			array('Email', 'length', 'max'=>30),
 			// The following rule is used by search().
@@ -74,6 +81,8 @@ class User extends CActiveRecord
 			'Username' => 'Username',
 			'Password' => 'Password',
 			'Repassword' => 'Retype Password',
+			'old_password' => 'Old Password',
+			'new_password' => 'New Password',
 			'Name' => 'Name',
 			'Email' => 'Email',
                         'isActive' => 'isActive'
@@ -114,6 +123,16 @@ class User extends CActiveRecord
         $pass = md5($this->Password);
         $this->Password = $pass;
         return true;
+    }
+
+    public function findPasswords($attribute, $params)
+    {
+    	$user = User::model()->findByPk(Yii::app()->user->id);
+    	echo 'user'. $user->Password.'</br>';
+    	echo 'old ' . md5($this->old_password).'</br>';
+    	echo 'ID ' . $user->ID;
+    	if($user->Password != md5($this->old_password))
+    		$this->addError($attribute, 'Old password is incorrect.');
     }
 
 
