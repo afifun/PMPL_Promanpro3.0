@@ -30,15 +30,6 @@
 		<?php echo $form->textArea($model,'Description',array('rows'=>6, 'cols'=>50)); ?>
 		<!--<?php echo $form->error($model,'Description'); ?>-->
 	</div>
-<!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'Status'); ?>
-		<?php 
-                //echo $form->textField($model,'Status',array('size'=>10,'maxlength'=>10)); 
-                 //echo CHtml::dropDownList('statusProject','', array(1=>'Open',2=>'Close',3=>'Delete'));
-                ?>
-		<?php //echo $form->error($model,'Status'); ?>
-	</div>-->
 
 	<div class="row">
 		<?php echo $form->labelEx($model,'Start_Date'); ?>
@@ -76,13 +67,6 @@ $this->widget('zii.widgets.jui.CJuiDatePicker', array(
             )
 ));?>
 
-        <!--
-	<div class="row">
-		<?php echo $form->labelEx($model,'adminProject'); ?>
-		<?php echo $form->textField($model,'adminProject',array('size'=>30,'maxlength'=>30)); ?>
-		<?php echo $form->error($model,'adminProject'); ?>
-	</div>
-        -->
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>
