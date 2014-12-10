@@ -33,7 +33,7 @@ $this->breadcrumbs=array(
 
 	<!--<?php echo $form->checkBoxRow($model,'rememberMe'); ?>-->
 
-	<div class="form-actions">
+	<div class="form-actions" style="border-top:none; background-color:#ecf0f1;">
 		<?php $this->widget('bootstrap.widgets.TbButton', array(
             'buttonType'=>'submit',
             'type'=>'primary',
