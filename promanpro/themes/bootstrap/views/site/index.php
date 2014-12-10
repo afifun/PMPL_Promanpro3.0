@@ -1,59 +1,139 @@
 <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide">
-      <div class="carousel-inner">
-        <div class="item active">
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/h.jpg">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Welcome to Promanpro</h1>
-              <p class="lead">Manage your project easily, collaboratively</p>
-              <?php $this->widget('bootstrap.widgets.TbButton', array(
-                'label'=>'Sign Up',
-                'url'=>array('/site/register'),
-                'type'=>'warning', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'size'=>'large', // null, 'large', 'small' or 'mini'
-            )); ?>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/i.png">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Features</h1>
-              <p class="lead">You can create your own projects and invite people to join your project. You can also manage your tasks and schedules with other participants</p>
-              <!--<a class="btn btn-large btn-primary" href="#">Learn more</a> -->
-              <?php $this->widget('bootstrap.widgets.TbButton', array(
-                'label'=>'Learn More',
-                'url'=>array('/site/register'),
-                'type'=>'warning', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'size'=>'large', // null, 'large', 'small' or 'mini'
-            )); ?>
-            </div>
-          </div>
-        </div>
-        <div class="item">
-          <img src="<?php echo Yii::app()->request->baseUrl; ?>/img/j.png">
-          <div class="container">
-            <div class="carousel-caption">
-              <h1>Need Help?</h1>
-              <p class="lead">How do I register? How do I make a project, etc.? Don't worry, we got all the answers here</p>
-              <!-- <a class="btn btn-large btn-primary" href="#">View FAQ</a> -->
-              <?php $this->widget('bootstrap.widgets.TbButton', array(
-                'label'=>'View FAQ',
-                'url'=>array('/site/register'),
-                'type'=>'warning', // null, 'primary', 'info', 'success', 'warning', 'danger' or 'inverse'
-                'size'=>'large', // null, 'large', 'small' or 'mini'
-            )); ?>
-            </div>
-          </div>
-        </div>
-      </div>
-      <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-      <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
-    </div><!-- /.carousel -->    
+   <style type="text/css">
+    body{
+    background: url(../../img/h.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
 
+.col-md-10{
+    margin-left: 220px;
+}
+
+#box{
+    margin-top: 100px;
+}
+
+
+.rightbox{
+    padding-top: 30px;
+    padding-left: 40px;
+    float: left;
+    width: 450px;   
+    background-color: rgba(255, 255, 255, 0.8);
+
+}
+
+    .rightbox h3{
+        text-align: center;
+
+    }
+
+    .login{
+        margin-top: 40px;
+    }
+
+        .login li{
+            margin-left: 75px;
+            float: left;
+        }
+
+    .rightbox h4{
+        margin-top: 30px;
+    }
+
+    .form-buat-akun input[type="text"]{
+        margin-bottom: 5px;
+        width: 90%;
+        height: 33px;
+        padding: 2px 5px;
+        background: #959595;
+        border: none;
+        display: inline-block;
+    }
+
+    .button{
+        
+    }
+
+    #box input[type="submit"]{   
+        padding-bottom: 30px;
+        margin-bottom: 10px;
+        margin-top: 7px;
+        margin-left: 120px;
+        width: 99px;
+        height: 38px;
+        background-color: #1ABC9C;
+        display: block;   
+        border-radius: 5px;
+        color: #fff
+    }
+
+    .button a:hover{
+        text-decoration: none;
+    }
+
+    
+
+.clearfix{
+    clear: both;
+}
+
+@media all and (max-width: 480px){
+      .box{
+        margin-top: 0px;
+      }
+
+      .col-md-10{
+        margin-left: 0px;
+      }
+
+      .searchbox{
+        padding-bottom: 30px;
+      }
+    }      
+
+</style>
+
+
+
+
+   <div class="container">
+            <div class="wrapper">
+                <div class="col-md-10">
+                    <div id="box" >                        
+                        <div class="rightbox">
+                            <h1>Promanpro</h1>
+                            <h2>Manage your project easily, collaboratively</h2>
+                            <form action="" method="post">
+                                <div class="form-buat-akun">
+                                    <p><input type = "text" name="nama" id ="nama" value= "" placeholder="Your name"
+                                    /></p>
+                                    <p><input type = "text" name="email" id ="email" value= "" placeholder="Your username (Alphanumerics with no space)"
+                                     /></p>
+                                    <p><input type = "text" name="hp" id ="hp" value= "" placeholder="Your password (6-20 characters)"
+                                     /></p>
+                                     <p><input type = "text" name="email" id ="email" value= "" placeholder="Retype your password (6-20 characters)"
+                                     /></p>
+                                    <p><input type = "text" name="hp" id ="hp" value= "" placeholder="Your email"
+                                     /></p>
+                                </div>
+                            </form> 
+                            <div class="button">
+                                <input type="submit" name="submit" value="Submit">
+                            </div>  
+                            <p>Have an account? <a href="">Login here</a></p>                       
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            
+        </div>
+   
 <?php
 /* @var $this SiteController */
 
