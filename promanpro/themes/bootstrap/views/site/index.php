@@ -1,6 +1,6 @@
 <!-- Carousel
     ================================================== -->
-   <style type="text/css">
+<style type="text/css">
     body{
     background: url(../../img/h.jpg);
     -webkit-background-size: cover;
@@ -19,7 +19,8 @@
 
 
 .rightbox{
-    padding-top: 30px;
+    margin-top: 0;
+    padding-top: 0;
     padding-left: 40px;
     float: left;
     width: 450px;   
@@ -60,13 +61,13 @@
     }
 
     #box input[type="submit"]{   
-        padding-bottom: 30px;
+        /*padding-bottom: 30px;*/
         margin-bottom: 10px;
         margin-top: 7px;
-        margin-left: 120px;
+        margin-left: 150px;
         width: 99px;
         height: 38px;
-        background-color: #1ABC9C;
+        /*background-color: #1ABC9C;*/
         display: block;   
         border-radius: 5px;
         color: #fff
@@ -82,25 +83,33 @@
     clear: both;
 }
 
-@media all and (max-width: 480px){
+/*@media all and (max-width: 750px){
+  .box{
+    margin-left: -123px;
+      .searchbox{
+        padding-bottom: 100px;
+      }
+  }
+*/
+
+@media all and (max-width: 700px){
       .box{
-        margin-top: 0px;
+        margin-top: 0;
+        margin-left: -35px;
       }
 
       .col-md-10{
-        margin-left: 0px;
+        margin-left: 0;
       }
 
       .searchbox{
         padding-bottom: 30px;
       }
-    }      
+}
+
+}     
 
 </style>
-
-
-
-
    <div class="container">
             <div class="wrapper">
                 <div class="col-md-10">
@@ -108,23 +117,39 @@
                         <div class="rightbox">
                             <h1>Promanpro</h1>
                             <h2>Manage your project easily, collaboratively</h2>
-                            <form action="" method="post">
-                                <div class="form-buat-akun">
-                                    <p><input type = "text" name="nama" id ="nama" value= "" placeholder="Your name"
-                                    /></p>
-                                    <p><input type = "text" name="email" id ="email" value= "" placeholder="Your username (Alphanumerics with no space)"
-                                     /></p>
-                                    <p><input type = "text" name="hp" id ="hp" value= "" placeholder="Your password (6-20 characters)"
-                                     /></p>
-                                     <p><input type = "text" name="email" id ="email" value= "" placeholder="Retype your password (6-20 characters)"
-                                     /></p>
-                                    <p><input type = "text" name="hp" id ="hp" value= "" placeholder="Your email"
-                                     /></p>
+                             <form action="" method="post">
+                                <div class="form-buat-akun" role="form">
+                                    <div class="form-group">
+                                        <div class="col-sm-5">
+                                          <input type = "text" name="nama" id ="nama" value= "" placeholder="Your name"/>
+                                        </div>
+                                    </div>
+                                      <div class="form-group">
+                                        <div class="col-sm-5">
+                                          <input type = "text" name="email" id ="email" value= "" placeholder="Your username (Alphanumerics with no space)"/>
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <div class="col-sm-5">
+                                          <input type = "text" name="password" id ="password" value= "" placeholder="Your password (6-20 characters)"/>
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <div class="col-sm-5">
+                                          <input type = "text" name="repassword" id ="repassword" value= "" placeholder="Retype your password (6-20 characters)"/>
+                                        </div>
+                                      </div>
+
+                                      <div class="form-group">
+                                        <div class="col-sm-5">
+                                          <input type = "text" name="email" id ="email" value= "" placeholder="Your email"/>
+                                        </div>
+                                      </div>
+                                      <input type="submit" name="submit" value="Submit" class="btn btn-primary">
                                 </div>
-                            </form> 
-                            <div class="button">
-                                <input type="submit" name="submit" value="Submit">
-                            </div>  
+                            </form>                            
                             <p>Have an account? <a href="">Login here</a></p>                       
                         </div>
                     </div>
