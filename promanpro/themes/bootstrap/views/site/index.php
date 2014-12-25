@@ -136,17 +136,17 @@
                         <div class="rightbox">
                             <h1>Promanpro</h1>
                             <h2>Manage your project easily, collaboratively</h2>
-                            <?php echo $form->errorSummary($model); ?>
                              <form action="" method="post">
                                 <div class="form-buat-akun" role="form">
                                     <div class="form-group">
                                         <div class="col-sm-5">
-                                        
+                                        <?php echo $form->error($model,'Name'); ?>
                                         <?php echo $form->textField($model,'Name',array('size'=>20,'maxlength'=>20, 'placeholder' =>  'Your Name' )); ?>
                                         </div>
                                     </div>
                                       <div class="form-group">
                                         <div class="col-sm-5">
+                                          <?php echo $form->error($model,'Username'); ?>
                                           <?php echo $form->textField($model,'Username',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your username (Alphanumerics with no space)')); ?>
                                           
                                         </div>
@@ -154,18 +154,20 @@
 
                                       <div class="form-group">
                                         <div class="col-sm-5">
+                                          <?php echo $form->error($model,'Password'); ?>
                                           <?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your password (8-20 characters)')); ?>
                                         </div>
                                       </div>
-
                                       <div class="form-group">
                                         <div class="col-sm-5">
+                                          <?php echo $form->error($model,'Repassword'); ?>
                                           <?php echo $form->passwordField($model,'Repassword',array('size'=>20,'maxlength'=>20,'placeholder'=>'Retype your password (8-20 characters)')); ?>
                                         </div>
                                       </div>
 
                                       <div class="form-group">
                                         <div class="col-sm-5">
+                                          <?php echo $form->error($model,'Email'); ?>
                                           <?php echo $form->textField($model,'Email',array('size'=>40,'maxlength'=>40,'placeholder'=>'Your email')); ?>
                                         </div>
                                       </div>

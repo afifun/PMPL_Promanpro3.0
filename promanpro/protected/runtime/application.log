@@ -20,3 +20,20 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/PMPL_Promanpro3.0/promanpro/
 ---
+2014/12/25 10:00:22 [error] [php] Use of undefined constant Repassword - assumed 'Repassword' (C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\themes\bootstrap\views\site\index.php:160)
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(869): SiteController->renderFile()
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(782): SiteController->renderPartial()
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php(51): SiteController->render()
+#3 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\actions\CInlineAction.php(49): SiteController->actionIndex()
+#4 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#5 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(286): SiteController->runAction()
+#6 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CController.php(265): SiteController->runActionWithFilters()
+#7 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(282): SiteController->run()
+#8 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#9 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CWebApplication->run()
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php
+in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\themes\bootstrap\views\site\index.php (160)
+in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\protected\controllers\SiteController.php (51)
+in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php (13)
