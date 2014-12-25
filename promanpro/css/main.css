@@ -228,3 +228,7 @@ div.search-form
 {
 	background: #80CFFF;
 }
+
+.row{
+	margin-left: 0;
+}
