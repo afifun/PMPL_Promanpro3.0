@@ -1,8 +1,29 @@
 <!-- Carousel
     ================================================== -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="language" content="en" />
+  
+    
+
+  <title><?php echo CHtml::encode($this->pageTitle); ?></title>
+
+  <?php Yii::app()->bootstrap->register(); ?>
+  <!-- blueprint CSS framework -->
+  <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/screen.css" media="screen, projection" />
+  <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/print.css" media="print" />
+  <!--[if lt IE 8]>
+  <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/ie.css" media="screen, projection" />
+  <![endif]-->
+
+  <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
+  <!-- <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" /> -->
+  <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
+
 <style type="text/css">
     body{
-    background: url(../../img/h.jpg);
+    background: url(../../assets/img/header-bg.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -120,6 +141,7 @@
 }     
 
 </style>
+</head>
 
 <?php $form=$this->beginWidget('CActiveForm', array(
   'id'=>'user-form',
@@ -155,13 +177,14 @@
                                       <div class="form-group">
                                         <div class="col-sm-5">
                                           <?php echo $form->error($model,'Password'); ?>
-                                          <?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your password (8-20 characters)')); ?>
+                                          <?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your password (6-20 characters)')); ?>
                                         </div>
                                       </div>
+
                                       <div class="form-group">
                                         <div class="col-sm-5">
                                           <?php echo $form->error($model,'Repassword'); ?>
-                                          <?php echo $form->passwordField($model,'Repassword',array('size'=>20,'maxlength'=>20,'placeholder'=>'Retype your password (8-20 characters)')); ?>
+                                          <?php echo $form->passwordField($model,'Repassword',array('size'=>20,'maxlength'=>20,'placeholder'=>'Retype your password (6-20 characters)')); ?>
                                         </div>
                                       </div>
 
