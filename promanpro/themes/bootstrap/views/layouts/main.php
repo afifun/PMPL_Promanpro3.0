@@ -39,7 +39,6 @@
         ),
     ),
 )); ?> -->
-
 <?php $this->widget('bootstrap.widgets.TbNavbar', array(
     'type'=>'inverse', // null or 'inverse'
     'brand'=>'Promanpro',
@@ -58,7 +57,7 @@
             'class'=>'bootstrap.widgets.TbMenu',
             'htmlOptions'=>array('class'=>'pull-right'),
             'items'=>array(
-                array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
+                //array('label'=>'Login', 'url'=>array('/site/login'), 'visible'=>Yii::app()->user->isGuest),
                 array('label'=>'Logout ('.Yii::app()->user->name.')', 'url'=>array('/site/logout'), 'visible'=>!Yii::app()->user->isGuest)
             ),
         ),
@@ -67,16 +66,17 @@
 <br /><br /><br />
 <?php echo $content; ?>
 <div class="container">
-	
-	
+    
+    
     <!--
-	<?php if(isset($this->breadcrumbs)):?>
-		<?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
-			'links'=>$this->breadcrumbs,
-		)); ?> --><!-- breadcrumbs -->
-	<?php endif?><!-- -->
+    <?php if(isset($this->breadcrumbs)):?>
+        <?php $this->widget('bootstrap.widgets.TbBreadcrumbs', array(
+            'links'=>$this->breadcrumbs,
+        )); ?> --><!-- breadcrumbs -->
+    <?php endif?><!-- -->
 
-	
+    
+
 
 	<div class="clear"></div>
 <br></br>
