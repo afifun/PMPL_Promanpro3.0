@@ -154,7 +154,7 @@
 
                                       <div class="form-group">
                                         <div class="col-sm-5">
-                                          <?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your password (6-20 characters)')); ?>
+                                          <?php echo $form->passwordField($model, 'Password',array('size'=>20,'maxlength'=>20,'placeholder'=>'Your password (8-20 characters)')); ?>
                                         </div>
                                       </div>
 
