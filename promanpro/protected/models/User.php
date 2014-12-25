@@ -43,7 +43,7 @@ class User extends CActiveRecord {
 						'Name',
 						'match',
 						'not' => true,
-						'pattern' => '/[^a-zA-Z]/' 
+						'pattern' => '/[^a-zA-Z ]/' 
 				),
 				array (
 						'Password',
