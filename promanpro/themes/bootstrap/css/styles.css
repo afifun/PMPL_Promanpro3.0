@@ -96,7 +96,18 @@
     -------------------------------------------------- */
 
     @media (max-width: 979px) {
+      .container {
+        margin-top: 11px;
+      }
+      .navbar-inner {
+        padding-top: 18px;
+        padding-left: 44px;
+      }
 
+      .btn-navbar{
+        margin-right: 28px;
+        margin-top: 14px;
+      }
       .container.navbar-wrapper {
         margin-bottom: 0;
         width: auto;
@@ -130,8 +141,17 @@
 
     @media (max-width: 767px) {
 
+      .container {
+        margin-top: 20pxs;
+      }
+
       .navbar-inner {
-        margin: -20px;
+        padding-top: 18px;
+        padding-left: 44px;
+      }
+
+      .btn-navbar{
+        margin-right: 28px;
       }
 
       .carousel {
