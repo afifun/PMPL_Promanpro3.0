@@ -33,7 +33,22 @@ class SiteController extends Controller
                 }
 		// renders the view file 'protected/views/site/index.php'
 		// using the default layout 'protected/views/layouts/main.php'
-		$this->render('index');
+            $model=new User;
+            $model->setScenario('register');
+            if(isset($_POST['User']))
+            {   
+
+                $model->attributes = $_POST['User'];
+
+                if($model->save())
+                {
+                    $this->SendMail($model); 
+                }
+                
+            }
+            $this->render('index',array(
+                'model'=>$model,
+            ));
 	}
 
 	/**
