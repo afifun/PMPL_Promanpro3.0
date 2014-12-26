@@ -1,3 +1,9 @@
+<style type="text/css">
+.button input{
+    margin-right: 15px;
+}
+</style>
+
 <?php
 
 $tanggalAwal = strtotime(Bookme::model()->findByAttributes(array('IdBookMe' => $idBookMe))->StartDate);
