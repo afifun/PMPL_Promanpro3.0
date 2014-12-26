@@ -1,6 +1,6 @@
 <style type="text/css">
 .button input{
-    margin-right: 15px;
+    margin-right: 5px;
 }
 </style>
 

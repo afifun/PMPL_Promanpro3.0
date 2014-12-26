@@ -41,7 +41,7 @@ for($i = 0; $i<$jumlahJam; $i++){
 }
 echo '</table>';
 echo '<div class="button">';
-echo '<input type="submit" value="submit" name="busyTime" style="margin-right: 15px;">';
+echo '<input type="submit" value="submit" name="busyTime" style="margin-right: 5px;">';
 echo CHtml::Button('Cancel', array('submit' => array('project/'.$idp)));
 echo '</div>';
 echo '</form>';
