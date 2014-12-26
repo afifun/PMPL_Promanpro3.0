@@ -1,3 +1,20 @@
+<style type="text/css">
+.center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%) }
+
+.border{
+	border-style: solid;
+    border-width: 1px;
+    border-color: #48c9b0;
+    padding-top: 30px;
+    padding-right: 80px;
+}
+</style>
 <?php
 /* @var $this SiteController */
 /* @var $model LoginForm */
@@ -9,11 +26,14 @@ $this->breadcrumbs=array(
 );
 ?>
 <br></br>
+
+
+<div class="form">
+	<div class="center">
 <h1>Login</h1>
 
 <p>Please fill out the following form with your login credentials:</p>
 
-<div class="form">
 
 <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
 	'id'=>'login-form',
@@ -26,6 +46,7 @@ $this->breadcrumbs=array(
 
 	<p class="note">Fields with <span class="required">*</span> are required.</p>
 
+	<div class="border">
 	<?php echo $form->textFieldRow($model,'username'); ?>
 
 	<?php echo $form->passwordFieldRow($model,'password',array(
@@ -40,7 +61,9 @@ $this->breadcrumbs=array(
             'label'=>'Login',
         )); ?>
 	</div>
+</div>
 
 <?php $this->endWidget(); ?>
 
 </div><!-- form -->
+</div>
