@@ -23,11 +23,15 @@
 
 <style type="text/css">
     body{
-    background: url(../../assets/img/header-bg.jpg);
+    background: url(pic.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+
+.container{
+  background-image: url(header-bg.jpg);
 }
 
 .col-md-10{
