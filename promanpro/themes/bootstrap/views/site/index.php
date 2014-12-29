@@ -201,7 +201,7 @@
                                       <?php echo CHtml::submitButton('Create', array('class'=>'btn btn-primary')); ?>
                                 </div>
                             </form>                            
-                            <p>Have an account? <a href="/PMPL_Promanpro3.0/promanpro/index.php/site/login">Login here</a></p>                       
+                            <p>Have an account? <a href="./index.php/site/login">Login here</a></p>                       
                         </div>
                     </div>
                     <div class="clearfix"></div>
