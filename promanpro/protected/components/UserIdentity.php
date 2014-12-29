@@ -36,8 +36,8 @@ class UserIdentity extends CUserIdentity
                         $this->setState('id', $users->ID);
                 $this->errorCode=self::ERROR_NONE;
                 }
-       echo 'users '.$users->Password.'</br>';
-       echo 'this '.$pass.'</br>';
+//        echo 'users '.$users->Password.'</br>';
+//        echo 'this '.$pass.'</br>';
 		return $this->errorCode;
 	}
 }
