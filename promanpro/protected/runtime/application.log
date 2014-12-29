@@ -145,3 +145,21 @@ Stack trace:
 REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/header-bg.jpg
 HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/
 ---
+2014/12/29 06:47:56 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "header-bg.jpg".' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('header-bg.jpg')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/header-bg.jpg
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/
+---
+2014/12/29 06:48:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "header-bg.jpg".' in C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('header-bg.jpg')
+#1 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\PMPL_Promanpro3.0\promanpro\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/PMPL_Promanpro3.0/promanpro/index.php/header-bg.jpg
+HTTP_REFERER=http://localhost/PMPL_Promanpro3.0/promanpro/index.php/
+---

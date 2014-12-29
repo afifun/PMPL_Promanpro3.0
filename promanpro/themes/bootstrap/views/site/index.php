@@ -47,6 +47,7 @@
     margin-top: 0;
     padding-top: 0;
     padding-left: 40px;
+    padding-top: 30px;
     float: left;
     width: 450px;   
     background-color: rgba(255, 255, 255, 0.8);
