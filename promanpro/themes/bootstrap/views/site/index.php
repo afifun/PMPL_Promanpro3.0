@@ -23,7 +23,7 @@
 
 <style type="text/css">
     body{
-    background: url(../../promanpro/img/h.jpg);
+    background: url("<?php echo Yii::app()->request->baseUrl; ?>/img/h.jpg");
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
