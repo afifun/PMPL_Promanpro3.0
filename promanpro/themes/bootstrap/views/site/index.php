@@ -23,7 +23,7 @@
 
 <style type="text/css">
     body{
-    background: url(pic.jpg);
+    background: url(../../promanpro/img/h.jpg);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
