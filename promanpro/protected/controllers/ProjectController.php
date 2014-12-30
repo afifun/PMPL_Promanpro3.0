@@ -69,10 +69,18 @@ class ProjectController extends Controller
 		// $this->performAjaxValidation($model);
 
                 if(isset($_POST['Project']))
-		{
+		{				var_dump($_POST['Project']);
                         $model->attributes=$_POST['Project'];
                         $model->adminProject=Yii::app()->user->id;
-                        $model->Status='open';
+                        echo $_POST['Project'] ;
+                        if($model->End_Date < date("Y-m-d")){
+                        	$model->Status='close';
+                        }
+                        else {
+
+                        	$model->Status='open';
+                        }
+                        
                         
 			if($model->save()){
                             $modelPart=new Participant;
@@ -137,6 +145,14 @@ class ProjectController extends Controller
 		if(isset($_POST['Project']))
 		{
 			$model->attributes=$_POST['Project'];
+			if($model->End_Date < date("Y-m-d")){
+                        	$model->Status='close';
+                        }
+                        else {
+
+                        	$model->Status='open';
+                       }
+                        
 			if($model->save())
 				$this->redirect(array('view','id'=>$model->ID));
 		}
@@ -167,18 +183,25 @@ class ProjectController extends Controller
                         $modelPro = Participant::model()->findAll();
                         $modelTask = Task::model()->findAll();
 
-                        foreach($modelPro as $pro){
-                            $idu = $pro->idProject;
-                            if($idu==$id){
-                                $pro->delete();
-                            }
-                        }
-                        foreach($modelTask as $prot){
-                            $idu = $prot->idProject;
-                            if($idu==$id){
-                                $prot->delete();
-                            }
-                        }
+                        if($modelPro != null){
+
+			             	foreach($modelPro as $pro){
+				                 $idu = $pro->idProject;
+					                 if($idu==$id){
+					                     $pro->delete();
+				                 }
+			             	}
+             			}   
+             
+			            if($modelTask != null){
+
+			             	foreach($modelTask as $task){
+			                 $idu = $task->idProject;
+				                 if($idu==$id){
+				                     $task->delete();
+				                 }
+			             	}
+			             }   
                         if(!isset($_GET['ajax']))
                         $this->redirect(Yii::app()->user->returnUrl=array('index'));
                     }
@@ -204,19 +227,27 @@ class ProjectController extends Controller
             //$listP = array();
              $modelPro = Participant::model()->findAll();
              $modelTask = Task::model()->findAll();
-                
-             foreach($modelPro as $pro){
-                 $idu = $pro->idProject;
-                 if($idu==$id){
-                     $pro->delete();
-                 }
-             }
-             foreach($modelTask as $prot){
-                 $idu = $prot->idProject;
-                 if($idu==$id){
-                     $prot->delete();
-                 }
-             }
+             
+            if($modelPro != null){
+
+             	foreach($modelPro as $pro){
+	                 $idu = $pro->idProject;
+		                 if($idu==$id){
+		                     $pro->delete();
+	                 }
+             	}
+             }   
+             
+            if($modelTask != null){
+
+             	foreach($modelTask as $task){
+                 $idu = $task->idProject;
+	                 if($idu==$id){
+	                     $task->delete();
+	                 }
+             	}
+             }   
+             
         
                 // if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
 		if(!isset($_GET['ajax']))

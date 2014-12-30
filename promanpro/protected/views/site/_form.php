@@ -47,7 +47,6 @@
 		<?php echo $form->textField($model,'Email',array('size'=>40,'maxlength'=>40,'placeholder'=>'Your email')); ?>
 		<!--<?php echo $form->error($model,'Email'); ?>-->
 	</div>
-
 	
 
 	<div class="row buttons">

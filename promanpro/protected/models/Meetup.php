@@ -34,6 +34,11 @@ class Meetup extends CActiveRecord
 			array('IdProject, Name, StartDay, EndDay, StartTime, EndTime', 'required'),
 			array('IdProject', 'numerical', 'integerOnly'=>true),
 			array('Name', 'length', 'max'=>30),
+			array (
+						'Name',
+						'match',
+						'pattern' => '/^[a-zA-Z]+[a-zA-Z ]$/' 
+				),
 			array('Description', 'length', 'max'=>140),
                     array('EndTime','cekWaktu'),
                     array('EndDay','cekTanggal'),

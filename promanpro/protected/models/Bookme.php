@@ -34,6 +34,11 @@ class Bookme extends CActiveRecord
 			array('IdProject, StartDate, EndDate, StartTime, EndTime, Name', 'required'),
 			array('IdProject', 'numerical', 'integerOnly'=>true),
 			array('Name', 'length', 'max'=>40),
+			array (
+						'Name',
+						'match',
+						'pattern' => '/^[a-zA-Z]+[a-zA-Z ]$/' 
+				),
 			array('Description', 'length', 'max'=>300),
                     array('EndTime','cekWaktu'),
                     array('EndDate','cekTanggal'),
@@ -43,6 +48,8 @@ class Bookme extends CActiveRecord
 			array('IdBookMe, IdProject, StartDate, EndDate, StartTime, EndTime, Name, Description', 'safe', 'on'=>'search'),
 		);
 	}
+
+
 
 	/**
 	 * @return array relational rules.
@@ -64,6 +71,12 @@ class Bookme extends CActiveRecord
         public function cekWaktu(){
             if($this->StartTime > $this->EndTime){
                 $this->addError('EndTime', 'The Start Time cannot be older than End Time') ;
+            }
+            else if($this->StartTime == $this->EndTime){
+                $this->addError('EndTime', 'The Start Time cannot be same as End Time') ;
+            }
+            else {
+
             }
         }
         

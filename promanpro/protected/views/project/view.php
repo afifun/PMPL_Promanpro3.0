@@ -7,13 +7,16 @@ $this->breadcrumbs=array(
 	$model->Name,
 );
 
-$this->menu=array(
-	//array('label'=>'List Project', 'url'=>array('index')),
-	//array('label'=>'Create Project', 'url'=>array('create')),
-	array('label'=>'Update Project', 'url'=>array('update', 'id'=>$model->ID)),
+
+if($model->Status == 'open' ){
+
+    $this->menu=array(
+    //array('label'=>'List Project', 'url'=>array('index')),
+    //array('label'=>'Create Project', 'url'=>array('create')),
+    array('label'=>'Update Project', 'url'=>array('update', 'id'=>$model->ID)),
     array('label'=>'Setting Project', 'url'=>array('setting', 'id'=>$model->ID)),
-	//array('label'=>'Delete Project', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ID),'confirm'=>'Are you sure you want to delete this item?')),
-	array('label'=>'Create Task', 'url'=>array('task/create', 'id'=>$model->ID)),
+    //array('label'=>'Delete Project', 'url'=>'#', 'linkOptions'=>array('submit'=>array('delete','id'=>$model->ID),'confirm'=>'Are you sure you want to delete this item?')),
+    array('label'=>'Create Task', 'url'=>array('task/create', 'id'=>$model->ID)),
         //array('label'=>'View Task', 'url'=>array('task/index', 'id'=>$model->ID)),
         array('label'=>'Create invitation', 'url'=>array('invitation/create', 'id'=>$model->ID)),
         //array('label'=>'View Participant', 'url'=>array('participant/index', 'id'=>$model->ID)),
@@ -21,6 +24,18 @@ $this->menu=array(
     array('label'=>'Create Meet Up', 'url'=>array('Meetup/Create', 'idProject'=>$model->ID)),
         //array('label'=>'Manage Project', 'url'=>array('admin')),
 );
+}
+else{
+
+     $this->menu=array(
+    //array('label'=>'List Project', 'url'=>array('index')),
+    //array('label'=>'Create Project', 'url'=>array('create')),
+    array('label'=>'Update Project', 'url'=>array('update', 'id'=>$model->ID)),
+    array('label'=>'Setting Project', 'url'=>array('setting', 'id'=>$model->ID)),
+        //array('label'=>'Manage Project', 'url'=>array('admin')),
+);
+}
+
 
 $dataProvider2=new CActiveDataProvider('Participant',array(
                     'criteria'=>array(
@@ -60,7 +75,8 @@ $bm = '';
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>Link ".$i."</a>";
                 $nama = $record[$i]->Name;
                 //echo "<a href='../BookMe/bookingUp?idBookMe=".$linkid."'>".($i+1).". ".$nama."</a>";
-                $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."' style=text-decoration:none;>".($i+1).". ".$nama."</a><button type=Submit; style=float:right;>Edit</button><br>" ;
+                $bm.= ($i+1).". ".$nama."<button onClick=".'"'."location.href='../BookMe/bookingUp?idBookMe=".$linkid."'".'"'." style=float:right;>Edit</button><br><br>";
+               // $bm .= "<a href='../BookMe/bookingUp?idBookMe=".$linkid."' style=text-decoration:none;>".($i+1).". ".$nama."</a><button type=Submit; style='float:right';>Edit</button><br><br>" ;
                 //echo "<br>";
              }
         }
@@ -81,7 +97,7 @@ $bm = '';
                 $nama = $record[$i]->Name;
     //            echo "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."'>".($i+1).". ".$nama."</a>";
     //            echo "<br>";
-                $mu .= "<a href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."' style=text-decoration:none;>".($i+1).". ".$nama."</a><button type=Submit; style=float:right;>Edit</button><br>";
+                $mu .= ($i+1).". ".$nama."<button onClick=".'"'."location.href='../Meetup/meetingUp?IdMeetup=".$linkid."&idp=".$model->ID."'".'"'." style=float:right;>Edit</button><br><br>";
             }
         }
     } else {

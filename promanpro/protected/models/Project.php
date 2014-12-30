@@ -42,7 +42,13 @@ class Project extends CActiveRecord {
 				),
 				array (
 						'Name',
-						'unique' 
+						'match',
+						'pattern' => '/^[a-zA-Z]+[a-zA-Z ]$/' 
+				),
+				array (
+						'Name',
+						'unique',
+
 				),
 				array (
 						'Name',

@@ -45,10 +45,14 @@ class BookMeController extends Controller {
         if (isset($_POST['Bookme'])) {
             $model->attributes = $_POST['Bookme'];
             $model->IdProject = $idProject;
+            
             if ($model->validate()) {
                 $model->save();
                 //return;
                 $this->redirect(array('busyTime', 'idBookMe' => $model->IdBookMe));
+            }
+            else {
+
             }
         }
         $this->render('Create', array('model' => $model, 'idp' => $idProject));
